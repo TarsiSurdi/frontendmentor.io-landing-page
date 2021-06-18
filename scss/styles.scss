@@ -10,6 +10,7 @@ body {
 }
 
 section.hero {
+  box-sizing: border-box;
   height: 100vh;
 
   background: url("../images/desktop/image-header.jpg"), $hero-bg;
@@ -62,7 +63,7 @@ section.hero {
 }
 
 h1 {
-  margin: 200px auto;
+  margin: 180px auto;
 
   font-family: "Fraunces";
   font-weight: 900;
