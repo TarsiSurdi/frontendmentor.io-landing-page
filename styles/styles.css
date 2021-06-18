@@ -76,4 +76,50 @@ h1 {
   letter-spacing: 0.2em;
   color: white;
 }
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[7];
+  -ms-grid-columns: (1fr)[4];
+      grid-template: repeat(7, 1fr)/repeat(4, 1fr);
+}
+
+main section,
+main aside {
+  grid-column: span 2;
+  background-position: center;
+  background-size: cover;
+}
+
+main aside img {
+  width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+main section.testimonials {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: 4 / 1 / 6 / 5;
+}
+
+.bg-image {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.graphic {
+  background-image: url("../images/desktop/image-graphic-design.jpg");
+}
+
+.photography {
+  background-image: url("../images/desktop/image-photography.jpg");
+}
 /*# sourceMappingURL=styles.css.map */
