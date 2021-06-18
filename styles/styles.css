@@ -1,1 +1,77 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+html,
+body {
+  margin: 0;
+  font-size: 18px;
+}
+
+section.hero {
+  height: 100vh;
+  background: url("../images/desktop/image-header.jpg"), #3dc3ff;
+  background-size: cover;
+  background-position: center;
+  padding: 2.5rem;
+}
+
+section.hero header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+}
+
+section.hero header img {
+  min-height: 100%;
+}
+
+section.hero header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 35%;
+}
+
+section.hero header nav a {
+  font-family: "Barlow";
+  text-decoration: none;
+  color: white;
+}
+
+section.hero header nav button {
+  font-family: "Fraunces";
+  text-transform: uppercase;
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 1.25em 2em;
+}
+
+section.hero img.arrow-down {
+  display: block;
+  margin: auto;
+}
+
+h1 {
+  margin: 200px auto;
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 40pt;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+
+$hero-bg: rgb(61, 195, 255);
+
+html,
+body {
+  margin: 0;
+  font-size: 18px;
+}
+
+section.hero {
+  height: 100vh;
+
+  background: url("../images/desktop/image-header.jpg"), $hero-bg;
+  background-size: cover;
+  background-position: center;
+  padding: 2.5rem;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 30px;
+
+    img {
+      min-height: 100%;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 35%;
+
+      a {
+        font-family: "Barlow";
+        text-decoration: none;
+        color: white;
+      }
+
+      button {
+        font-family: "Fraunces";
+        text-transform: uppercase;
+
+        background-color: white;
+
+        border: none;
+        border-radius: 30px;
+
+        padding: 1.25em 2em;
+      }
+    }
+  }
+
+  img.arrow-down {
+    display: block;
+    margin: auto;
+  }
+}
+
+h1 {
+  margin: 200px auto;
+
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 40pt;
+
+  text-transform: uppercase;
+  text-align: center;
+
+  letter-spacing: 0.2em;
+
+  color: white;
+}
