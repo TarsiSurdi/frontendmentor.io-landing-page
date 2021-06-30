@@ -3,6 +3,11 @@
 
 $hero-bg: rgb(61, 195, 255);
 
+$dark-blue: hsl(212, 27%, 19%);
+$dark-gray: hsl(213, 9%, 39%);
+$dark-gray-blue: hsl(232, 10%, 55%);
+$gray-blue: hsl(210, 4%, 67%);
+
 html,
 body {
   margin: 0;
@@ -80,6 +85,60 @@ h1 {
 main {
   display: grid;
   grid-template: repeat(7, 1fr) / repeat(4, 1fr);
+
+  section {
+    padding: 120px;
+
+    font-family: "Fraunces";
+    color: $dark-blue;
+
+    h2 {
+      font-weight: 900;
+      font-size: 32pt;
+    }
+
+    p {
+      font-family: "Barlow";
+      line-height: 1.5em;
+      color: $dark-gray-blue;
+    }
+
+    a,
+    a:visited {
+      font-weight: 900;
+      font-size: 12pt;
+
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      color: $dark-blue;
+    }
+
+    a::after {
+      content: "";
+
+      display: block;
+      z-index: -1;
+      position: relative;
+
+      top: -7px;
+      left: -5px;
+
+      width: 8.5em;
+      height: 6px;
+
+      border-radius: 5px;
+    }
+
+    a.yellow::after {
+      background-color: hsl(51, 84%, 83%);
+    }
+
+    a.red::after {
+      background-color: hsl(7, 62%, 81%);
+    }
+  }
 
   section,
   aside {

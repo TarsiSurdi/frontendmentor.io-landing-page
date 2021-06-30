@@ -85,6 +85,53 @@ main {
       grid-template: repeat(7, 1fr)/repeat(4, 1fr);
 }
 
+main section {
+  padding: 120px;
+  font-family: "Fraunces";
+  color: #23303e;
+}
+
+main section h2 {
+  font-weight: 900;
+  font-size: 32pt;
+}
+
+main section p {
+  font-family: "Barlow";
+  line-height: 1.5em;
+  color: #818498;
+}
+
+main section a,
+main section a:visited {
+  font-weight: 900;
+  font-size: 12pt;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #23303e;
+}
+
+main section a::after {
+  content: "";
+  display: block;
+  z-index: -1;
+  position: relative;
+  top: -7px;
+  left: -5px;
+  width: 8.5em;
+  height: 6px;
+  border-radius: 5px;
+}
+
+main section a.yellow::after {
+  background-color: #f8edaf;
+}
+
+main section a.red::after {
+  background-color: #edb8b1;
+}
+
 main section,
 main aside {
   grid-column: span 2;
