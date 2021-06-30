@@ -18,7 +18,7 @@ nav {
   align-items: center;
   justify-content: space-between;
 
-  flex: 1;
+  column-gap: 3em;
 
   a {
     font-family: "Barlow";
@@ -36,6 +36,14 @@ nav {
     border-radius: 30px;
 
     padding: 1.25em 2em;
+
+    transition-property: background-color color;
+    transition-duration: 0.1s;
+  }
+
+  button:active {
+    background-color: #6eceff;
+    color: white;
   }
 }
 
@@ -54,7 +62,6 @@ section.hero {
     align-items: center;
 
     flex-wrap: wrap;
-    gap: 20%;
 
     height: 30px;
 
@@ -145,14 +152,24 @@ main {
       height: 6px;
 
       border-radius: 5px;
+
+      transition: background-color 0.5s ease;
     }
 
     a.yellow::after {
       background-color: hsl(51, 84%, 83%);
     }
 
+    a.yellow:hover::after {
+      background-color: hsl(51, 100%, 49%);
+    }
+
     a.red::after {
       background-color: hsl(7, 62%, 81%);
+    }
+
+    a.red:hover::after {
+      background-color: hsl(7, 99%, 70%);
     }
   }
 
@@ -313,10 +330,16 @@ footer {
     display: flex;
     justify-content: space-evenly;
 
+    width: 30%;
+
     margin: 80px auto;
 
     a {
       color: hsl(167, 40%, 24%);
+    }
+
+    a:hover {
+      color: white;
     }
   }
 }
@@ -338,6 +361,10 @@ div.socials {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  a:hover {
+    filter: contrast(100) invert(100%);
   }
 
   a:nth-child(1) {
