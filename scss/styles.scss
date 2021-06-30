@@ -18,7 +18,7 @@ nav {
   align-items: center;
   justify-content: space-between;
 
-  flex: 1;
+  column-gap: 3em;
 
   a {
     font-family: "Barlow";
@@ -54,7 +54,6 @@ section.hero {
     align-items: center;
 
     flex-wrap: wrap;
-    gap: 20%;
 
     height: 30px;
 

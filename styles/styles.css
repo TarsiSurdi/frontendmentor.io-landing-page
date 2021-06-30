@@ -16,9 +16,8 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-column-gap: 3em;
+          column-gap: 3em;
 }
 
 nav a {
@@ -58,7 +57,6 @@ section.hero header {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 20%;
   height: 30px;
 }
 
