@@ -16,7 +16,9 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 35%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 nav a {
@@ -54,16 +56,20 @@ section.hero header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20%;
   height: 30px;
 }
 
 section.hero header img {
-  min-height: 100%;
+  height: 100%;
 }
 
 section.hero img.arrow-down {
   display: block;
   margin: auto;
+  position: relative;
   -webkit-animation-name: arrowMovement;
           animation-name: arrowMovement;
   -webkit-animation-duration: 1s;
@@ -95,6 +101,7 @@ main {
 
 main section {
   font-family: "Fraunces";
+  max-height: 60vh;
 }
 
 main section p {
@@ -150,15 +157,20 @@ main section.bg-image {
   text-align: center;
 }
 
+main section.bg-image h3,
+main section.bg-image p {
+  position: relative;
+  top: 55%;
+}
+
 main section.bg-image h3 {
-  margin-top: 375px;
   font-weight: 900;
   font-size: 20pt;
   text-transform: capitalize;
 }
 
 main section.bg-image p {
-  margin: auto 150px;
+  margin: auto 22%;
   line-height: 1.75em;
 }
 
@@ -188,6 +200,7 @@ main aside img {
 
 section.testimonials {
   padding: 150px 0 100px 0;
+  overflow-x: auto;
   background-color: #fffbf8;
   font-family: "Barlow";
 }
@@ -226,7 +239,8 @@ section.testimonials div#testimonialsWrapper div img {
 }
 
 section.testimonials div#testimonialsWrapper div p {
-  width: 340px;
+  margin: auto;
+  max-width: 60%;
   color: #5a636c;
 }
 
@@ -355,8 +369,7 @@ div.attribution a:hover {
 
 .bg-image {
   background-size: cover;
-  width: 100%;
-  height: 100%;
+  max-height: 100%;
 }
 
 .graphic {
@@ -369,19 +382,19 @@ div.attribution a:hover {
 
 @-webkit-keyframes arrowMovement {
   0% {
-    padding-top: 0px;
+    top: 0px;
   }
   100% {
-    padding-top: 20px;
+    top: 20px;
   }
 }
 
 @keyframes arrowMovement {
   0% {
-    padding-top: 0px;
+    top: 0px;
   }
   100% {
-    padding-top: 20px;
+    top: 20px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
