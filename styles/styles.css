@@ -33,6 +33,15 @@ nav button {
   border: none;
   border-radius: 30px;
   padding: 1.25em 2em;
+  -webkit-transition-property: background-color color;
+  transition-property: background-color color;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+
+nav button:active {
+  background-color: #6eceff;
+  color: white;
 }
 
 section.hero {
@@ -141,14 +150,24 @@ main section:not(.bg-image) a::after {
   width: 8.5em;
   height: 6px;
   border-radius: 5px;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 
 main section:not(.bg-image) a.yellow::after {
   background-color: #f8edaf;
 }
 
+main section:not(.bg-image) a.yellow:hover::after {
+  background-color: #fad400;
+}
+
 main section:not(.bg-image) a.red::after {
   background-color: #edb8b1;
+}
+
+main section:not(.bg-image) a.red:hover::after {
+  background-color: #fe7867;
 }
 
 main section.bg-image {
@@ -305,11 +324,16 @@ footer nav {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  width: 30%;
   margin: 80px auto;
 }
 
 footer nav a {
   color: #25564b;
+}
+
+footer nav a:hover {
+  color: white;
 }
 
 div.socials {
@@ -330,6 +354,11 @@ div.socials a {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+div.socials a:hover {
+  -webkit-filter: contrast(100) invert(100%);
+          filter: contrast(100) invert(100%);
 }
 
 div.socials a:nth-child(1) {
