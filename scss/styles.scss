@@ -68,6 +68,10 @@ section.hero {
     img {
       height: 100%;
     }
+
+    img.hamburguer {
+      display: none;
+    }
   }
 
   img.arrow-down {
@@ -100,7 +104,7 @@ h1 {
 
 main {
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
 
   section {
     font-family: "Fraunces";
@@ -205,8 +209,6 @@ main {
 
   section,
   aside {
-    grid-column: span 2;
-
     background-position: center;
     background-size: cover;
   }
@@ -423,5 +425,68 @@ div.attribution {
 
   100% {
     top: 20px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  section.hero {
+    height: 600px;
+
+    padding: 1.5em;
+
+    background: url("../images/mobile/image-header.jpg");
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+    header {
+      margin-top: 0.5em;
+      height: 25px;
+
+      nav {
+        display: none;
+      }
+
+      img.hamburguer {
+        display: block;
+        height: 80%;
+      }
+    }
+  }
+
+  h1 {
+    margin: 80px auto 40px auto;
+    font-size: 28pt;
+  }
+
+  main {
+    grid-template: min-content repeat(3, 1fr) / 1fr;
+    height: fit-content;
+
+    section:not(.bg-image) {
+      padding: 0px 1em 1em 1em;
+      text-align: center;
+
+      h2 {
+        font-size: 24pt;
+      }
+
+      a::after {
+        left: 100px;
+      }
+    }
+
+    > section:first-child {
+      grid-row: 2;
+    }
+
+    aside {
+      img {
+        width: 100vw;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
   }
 }

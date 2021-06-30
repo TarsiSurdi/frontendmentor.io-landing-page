@@ -73,6 +73,10 @@ section.hero header img {
   height: 100%;
 }
 
+section.hero header img.hamburguer {
+  display: none;
+}
+
 section.hero img.arrow-down {
   display: block;
   margin: auto;
@@ -102,8 +106,8 @@ main {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[3];
-  -ms-grid-columns: (1fr)[4];
-      grid-template: repeat(3, 1fr)/repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template: repeat(3, 1fr)/repeat(2, 1fr);
 }
 
 main section {
@@ -201,7 +205,6 @@ main section.bg-image.photography {
 
 main section,
 main aside {
-  grid-column: span 2;
   background-position: center;
   background-size: cover;
 }
@@ -422,6 +425,64 @@ div.attribution a:hover {
   }
   100% {
     top: 20px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  section.hero {
+    height: 600px;
+    padding: 1.5em;
+    background: url("../images/mobile/image-header.jpg");
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+  section.hero header {
+    margin-top: 0.5em;
+    height: 25px;
+  }
+  section.hero header nav {
+    display: none;
+  }
+  section.hero header img.hamburguer {
+    display: block;
+    height: 80%;
+  }
+  h1 {
+    margin: 80px auto 40px auto;
+    font-size: 28pt;
+  }
+  main {
+    -ms-grid-rows: -webkit-min-content (1fr)[3];
+    -ms-grid-rows: min-content (1fr)[3];
+    -ms-grid-columns: 1fr;
+        grid-template: -webkit-min-content repeat(3, 1fr)/1fr;
+        grid-template: min-content repeat(3, 1fr)/1fr;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main section:not(.bg-image) {
+    padding: 0px 1em 1em 1em;
+    text-align: center;
+  }
+  main section:not(.bg-image) h2 {
+    font-size: 24pt;
+  }
+  main section:not(.bg-image) a::after {
+    left: 100px;
+  }
+  main > section:first-child {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  main aside img {
+    width: 100vw;
+    min-height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
   }
 }
 /*# sourceMappingURL=styles.css.map */
