@@ -181,13 +181,13 @@ main > aside:first-of-type {
 
 main aside {
   background-image: url("../images/desktop/image-stand-out.jpg");
-  background-size: cover;
   background-position: center;
-  height: 350px;
+  background-size: cover;
 }
 
 main section.bg-image {
   text-align: center;
+  background-position: top;
 }
 
 main section.bg-image h3,
@@ -434,8 +434,52 @@ div.attribution a:hover {
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 1000px) and (min-width: 540px) {
+  main {
+    -ms-grid-rows: 3fr 3fr 4fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template: 3fr 3fr 4fr / 1fr 1fr;
+  }
+  main section:not(.bg-image) {
+    padding: 3em;
+  }
+  main section.bg-image h3,
+  main section.bg-image p {
+    top: 50%;
+  }
+}
+
+@media only screen and (max-width: 728px) and (min-width: 540px) {
+  section.hero header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main {
+    -ms-grid-rows: 2fr 2fr 3fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template: 2fr 2fr 3fr / 1fr 1fr;
+  }
+  main section:not(.bg-image) {
+    padding: 2em;
+  }
+  main section.bg-image h3,
+  main section.bg-image p {
+    top: 50%;
+  }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 540px) {
+  main {
+    grid: repeat(3, 70vh)/1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 540px) {
   section.hero {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     height: 600px;
     padding: 1.5em;
     background: url("../images/mobile/image-header.jpg");
@@ -486,13 +530,14 @@ div.attribution a:hover {
     -ms-grid-row: 2;
     grid-row: 2;
   }
-  main aside img {
-    width: 100vw;
-    min-height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: top;
-       object-position: top;
+  main > aside:first-of-type {
+    background-image: url("../images/mobile/image-transform.jpg");
+  }
+  main aside {
+    background-image: url("../images/mobile/image-stand-out.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 350px;
   }
   main section.bg-image {
     height: 550px;
@@ -501,7 +546,7 @@ div.attribution a:hover {
   }
   main section.bg-image h3,
   main section.bg-image p {
-    top: 55%;
+    top: 58%;
   }
   main section.bg-image p {
     margin: auto 0.5em;

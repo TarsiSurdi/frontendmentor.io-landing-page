@@ -184,13 +184,13 @@ main {
 
   aside {
     background-image: url("../images/desktop/image-stand-out.jpg");
-    background-size: cover;
     background-position: center;
-    height: 350px;
+    background-size: cover;
   }
 
   section.bg-image {
     text-align: center;
+    background-position: top;
 
     h3,
     p {
@@ -434,8 +434,56 @@ div.attribution {
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 1000px) and (min-width: 540px) {
+  main {
+    grid-template: 3fr 3fr 4fr / 1fr 1fr;
+
+    section:not(.bg-image) {
+      padding: 3em;
+    }
+
+    section.bg-image {
+      h3,
+      p {
+        top: 50%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 728px) and (min-width: 540px) {
+  section.hero header {
+    justify-content: center;
+  }
+
+  main {
+    grid-template: 2fr 2fr 3fr / 1fr 1fr;
+
+    section:not(.bg-image) {
+      padding: 2em;
+    }
+
+    section.bg-image {
+      h3,
+      p {
+        top: 50%;
+      }
+    }
+  }
+}
+
+// Big screens
+@media only screen and (min-width: 1600px) and (max-width: 540px) {
+  main {
+    grid: repeat(3, 70vh) / 1fr 1fr;
+  }
+}
+
+// Mobile design
+@media only screen and (max-width: 540px) {
   section.hero {
+    justify-content: space-between;
+
     height: 600px;
 
     padding: 1.5em;
@@ -491,13 +539,15 @@ div.attribution {
       grid-row: 2;
     }
 
+    > aside:first-of-type {
+      background-image: url("../images/mobile/image-transform.jpg");
+    }
+
     aside {
-      img {
-        width: 100vw;
-        min-height: 100%;
-        object-fit: cover;
-        object-position: top;
-      }
+      background-image: url("../images/mobile/image-stand-out.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 350px;
     }
 
     section.bg-image {
@@ -508,7 +558,7 @@ div.attribution {
 
       h3,
       p {
-        top: 55%;
+        top: 58%;
       }
 
       p {
