@@ -98,6 +98,7 @@ h1 {
   text-align: center;
 
   letter-spacing: 0.2em;
+  word-wrap: break-word;
 
   color: white;
 }
@@ -177,6 +178,17 @@ main {
     }
   }
 
+  > aside:first-of-type {
+    background-image: url("../images/desktop/image-transform.jpg");
+  }
+
+  aside {
+    background-image: url("../images/desktop/image-stand-out.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+  }
+
   section.bg-image {
     text-align: center;
 
@@ -205,12 +217,6 @@ main {
 
   section.bg-image.photography {
     color: hsl(198, 62%, 26%);
-  }
-
-  section,
-  aside {
-    background-position: center;
-    background-size: cover;
   }
 
   aside img {
@@ -464,15 +470,20 @@ div.attribution {
     height: fit-content;
 
     section:not(.bg-image) {
-      padding: 0px 1em 1em 1em;
+      padding: 1em 1em 2em 1em;
       text-align: center;
 
       h2 {
         font-size: 24pt;
       }
 
+      a {
+        position: relative;
+      }
+
       a::after {
-        left: 100px;
+        position: absolute;
+        top: 14px;
       }
     }
 
@@ -488,5 +499,75 @@ div.attribution {
         object-position: top;
       }
     }
+
+    section.bg-image {
+      height: 550px;
+
+      background-size: cover;
+      background-position: top center;
+
+      h3,
+      p {
+        top: 55%;
+      }
+
+      p {
+        margin: auto 0.5em;
+      }
+    }
+  }
+
+  section.testimonials {
+    padding: 60px 0;
+
+    h3 {
+      font-size: 14pt;
+      margin-bottom: 60px;
+    }
+
+    div#testimonialsWrapper {
+      flex-direction: column;
+      row-gap: 50px;
+    }
+  }
+
+  section#gallery {
+    grid-template: 1fr 1fr / 1fr 1fr;
+
+    div:nth-child(1) {
+      background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+    }
+
+    div:nth-child(2) {
+      background-image: url("../images/mobile/image-gallery-orange.jpg");
+    }
+
+    div:nth-child(3) {
+      background-image: url("../images/mobile/image-gallery-cone.jpg");
+    }
+
+    div:nth-child(4) {
+      background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
+    }
+  }
+
+  footer {
+    nav {
+      flex-wrap: wrap;
+      row-gap: 1em;
+      width: unset;
+    }
+
+    div.socials {
+      width: 50%;
+    }
+  }
+
+  .graphic {
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+  }
+
+  .photography {
+    background-image: url("../images/mobile/image-photography.jpg");
   }
 }

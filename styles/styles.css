@@ -99,6 +99,7 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.2em;
+  word-wrap: break-word;
   color: white;
 }
 
@@ -174,6 +175,17 @@ main section:not(.bg-image) a.red:hover::after {
   background-color: #fe7867;
 }
 
+main > aside:first-of-type {
+  background-image: url("../images/desktop/image-transform.jpg");
+}
+
+main aside {
+  background-image: url("../images/desktop/image-stand-out.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+}
+
 main section.bg-image {
   text-align: center;
 }
@@ -201,12 +213,6 @@ main section.bg-image.graphic {
 
 main section.bg-image.photography {
   color: #19536b;
-}
-
-main section,
-main aside {
-  background-position: center;
-  background-size: cover;
 }
 
 main aside img {
@@ -463,14 +469,18 @@ div.attribution a:hover {
     height: fit-content;
   }
   main section:not(.bg-image) {
-    padding: 0px 1em 1em 1em;
+    padding: 1em 1em 2em 1em;
     text-align: center;
   }
   main section:not(.bg-image) h2 {
     font-size: 24pt;
   }
+  main section:not(.bg-image) a {
+    position: relative;
+  }
   main section:not(.bg-image) a::after {
-    left: 100px;
+    position: absolute;
+    top: 14px;
   }
   main > section:first-child {
     -ms-grid-row: 2;
@@ -483,6 +493,64 @@ div.attribution a:hover {
        object-fit: cover;
     -o-object-position: top;
        object-position: top;
+  }
+  main section.bg-image {
+    height: 550px;
+    background-size: cover;
+    background-position: top center;
+  }
+  main section.bg-image h3,
+  main section.bg-image p {
+    top: 55%;
+  }
+  main section.bg-image p {
+    margin: auto 0.5em;
+  }
+  section.testimonials {
+    padding: 60px 0;
+  }
+  section.testimonials h3 {
+    font-size: 14pt;
+    margin-bottom: 60px;
+  }
+  section.testimonials div#testimonialsWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 50px;
+  }
+  section#gallery {
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template: 1fr 1fr / 1fr 1fr;
+  }
+  section#gallery div:nth-child(1) {
+    background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+  }
+  section#gallery div:nth-child(2) {
+    background-image: url("../images/mobile/image-gallery-orange.jpg");
+  }
+  section#gallery div:nth-child(3) {
+    background-image: url("../images/mobile/image-gallery-cone.jpg");
+  }
+  section#gallery div:nth-child(4) {
+    background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
+  }
+  footer nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    row-gap: 1em;
+    width: unset;
+  }
+  footer div.socials {
+    width: 50%;
+  }
+  .graphic {
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+  }
+  .photography {
+    background-image: url("../images/mobile/image-photography.jpg");
   }
 }
 /*# sourceMappingURL=styles.css.map */
