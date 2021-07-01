@@ -68,6 +68,10 @@ section.hero {
     img {
       height: 100%;
     }
+
+    img.hamburguer {
+      display: none;
+    }
   }
 
   img.arrow-down {
@@ -94,13 +98,14 @@ h1 {
   text-align: center;
 
   letter-spacing: 0.2em;
+  word-wrap: break-word;
 
   color: white;
 }
 
 main {
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
 
   section {
     font-family: "Fraunces";
@@ -173,13 +178,24 @@ main {
     }
   }
 
+  > aside:first-of-type {
+    background-image: url("../images/desktop/image-transform.jpg");
+  }
+
+  aside {
+    background-image: url("../images/desktop/image-stand-out.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
   section.bg-image {
     text-align: center;
+    background-position: top;
 
     h3,
     p {
       position: relative;
-      top: 55%;
+      top: 60%;
     }
 
     h3 {
@@ -201,14 +217,6 @@ main {
 
   section.bg-image.photography {
     color: hsl(198, 62%, 26%);
-  }
-
-  section,
-  aside {
-    grid-column: span 2;
-
-    background-position: center;
-    background-size: cover;
   }
 
   aside img {
@@ -423,5 +431,193 @@ div.attribution {
 
   100% {
     top: 20px;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 540px) {
+  main {
+    grid-template: 3fr 3fr 4fr / 1fr 1fr;
+
+    section:not(.bg-image) {
+      padding: 3em;
+    }
+
+    section.bg-image {
+      h3,
+      p {
+        top: 50%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 728px) and (min-width: 540px) {
+  section.hero header {
+    justify-content: center;
+  }
+
+  main {
+    grid-template: 2fr 2fr 3fr / 1fr 1fr;
+
+    section:not(.bg-image) {
+      padding: 2em;
+    }
+
+    section.bg-image {
+      h3,
+      p {
+        top: 50%;
+      }
+    }
+  }
+}
+
+// Big screens
+@media only screen and (min-width: 1600px) and (max-width: 540px) {
+  main {
+    grid: repeat(3, 70vh) / 1fr 1fr;
+  }
+}
+
+// Mobile design
+@media only screen and (max-width: 540px) {
+  section.hero {
+    justify-content: space-between;
+
+    height: 600px;
+
+    padding: 1.5em;
+
+    background: url("../images/mobile/image-header.jpg");
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+    header {
+      margin-top: 0.5em;
+      height: 25px;
+
+      nav {
+        display: none;
+      }
+
+      img.hamburguer {
+        display: block;
+        height: 80%;
+      }
+    }
+  }
+
+  h1 {
+    margin: 80px auto 40px auto;
+    font-size: 28pt;
+  }
+
+  main {
+    grid-template: min-content repeat(3, 1fr) / 1fr;
+    height: fit-content;
+
+    section:not(.bg-image) {
+      padding: 1em 1em 2em 1em;
+      text-align: center;
+
+      h2 {
+        font-size: 24pt;
+      }
+
+      a {
+        position: relative;
+      }
+
+      a::after {
+        position: absolute;
+        top: 14px;
+      }
+    }
+
+    > section:first-child {
+      grid-row: 2;
+    }
+
+    > aside:first-of-type {
+      background-image: url("../images/mobile/image-transform.jpg");
+    }
+
+    aside {
+      background-image: url("../images/mobile/image-stand-out.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 350px;
+    }
+
+    section.bg-image {
+      height: 550px;
+
+      background-size: cover;
+      background-position: top center;
+
+      h3,
+      p {
+        top: 58%;
+      }
+
+      p {
+        margin: auto 0.5em;
+      }
+    }
+  }
+
+  section.testimonials {
+    padding: 60px 0;
+
+    h3 {
+      font-size: 14pt;
+      margin-bottom: 60px;
+    }
+
+    div#testimonialsWrapper {
+      flex-direction: column;
+      row-gap: 50px;
+    }
+  }
+
+  section#gallery {
+    grid-template: 1fr 1fr / 1fr 1fr;
+
+    div:nth-child(1) {
+      background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+    }
+
+    div:nth-child(2) {
+      background-image: url("../images/mobile/image-gallery-orange.jpg");
+    }
+
+    div:nth-child(3) {
+      background-image: url("../images/mobile/image-gallery-cone.jpg");
+    }
+
+    div:nth-child(4) {
+      background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
+    }
+  }
+
+  footer {
+    nav {
+      flex-wrap: wrap;
+      row-gap: 1em;
+      width: unset;
+    }
+
+    div.socials {
+      width: 50%;
+    }
+  }
+
+  .graphic {
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+  }
+
+  .photography {
+    background-image: url("../images/mobile/image-photography.jpg");
   }
 }
