@@ -469,7 +469,7 @@ div.attribution a:hover {
   }
 }
 
-@media only screen and (min-width: 1600px) and (max-width: 540px) {
+@media only screen and (min-width: 1600px) {
   main {
     grid: repeat(3, 70vh)/1fr 1fr;
   }
